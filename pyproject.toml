@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdlinkcheck"
+version = "0.1.0"
+description = "Find broken links in Markdown files"
+license = {text = "MIT"}
+authors = [{name = "Ryan Carter", email = "ryan66carter@gmail.com"}]
+requires-python = ">=3.8"
+
+[project.scripts]
+mdlinkcheck = "mdlinkcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
